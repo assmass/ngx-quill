@@ -8,18 +8,12 @@ const Quill = require('quill')
 @Component({
   selector: 'app-quill',
   template: ``,
-  styleUrls: [
-    './quill.component.css',
-    './../../../../node_modules/quill/dist/quill.bubble.css',
-    './../../../../node_modules/quill/dist/quill.snow.css',
-  ],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => QuillComponent),
-      multi: true,
-    },
-  ],
+  styleUrls: ['./quill.component.css'],
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => QuillComponent),
+    multi: true,
+  }],
   encapsulation: ViewEncapsulation.None
 })
 export class QuillComponent implements AfterViewInit, OnInit, ControlValueAccessor {
